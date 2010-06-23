@@ -1,0 +1,6 @@
+#!/bin/sh
+exec 2>&1
+exec \
+setuidgid <% @node[:tomcat6][:user] %> \
+ <% @node[:tomcat6][:home] %>/bin/catalina.sh run
+
